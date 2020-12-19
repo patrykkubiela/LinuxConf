@@ -47,6 +47,8 @@
 
 (add-hook 'vue-mode-hook #'lsp!)
 
+(setq-default dotspacemacs-configuration-layers
+  '((shell :variables shell-default-term-shell "/bin/fish")))
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -58,6 +60,33 @@
 ;; - `map!' for binding new keys
 
 (map! :after magit "C-c C-g" #'magit-statuS)
+
+;; Custom keybindings for cursor jumping between windows
+(map! :desc "Move cursor into down window"
+      "M-j" #'evil-window-down)
+(map! :desc "Move cursor into up window"
+      "M-k" #'evil-window-up)
+(map! :desc "Move cursor into window at left"
+      "M-h" #'evil-window-left)
+(map! :desc "Move cursor into window at right"
+      "M-l" #'evil-window-right)
+
+(map! :desc "Move window down"
+      "M-J" #'+evil/window-move-down)
+(map! :desc "Move window up"
+      "M-K" #'+evil/window-move-up)
+(map! :desc "Move window right"
+      "M-L" #'+evil/window-move-right)
+(map! :desc "Move window left"
+      "M-H" #'+evil/window-move-left)
+
+;;Close window
+(map! :desc "Delete window"
+      "M-w" #'evil-window-delete)
+
+;;Format code in active buffer
+(map! :leader
+      "c f" #'lsp-format-buffer)
 
 ;;(package! iedit)
 ;;(use-package! iedit
