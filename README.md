@@ -18,3 +18,8 @@ Fish isn't the quickest and lightest shell but it has everything that I need pre
 - [Fish Shelly](https://github.com/fish-shell/fish-shell) - GitHub repository
 - [Fisher](https://github.com/jorgebucaran/fisher) - Fish Shell plugin manager
 - [Async Prompt](https://github.com/acomagu/fish-async-prompt) - Make your prompt asynchronous!
+- [Alacritty](https://github.com/alacritty/alacritty) - OpenGL cross-platform terminal emulator
+
+# Managing files
+
+Next to gnome file manager I'm using [Midnight Commander](https://midnight-commander.org/) file manager.
